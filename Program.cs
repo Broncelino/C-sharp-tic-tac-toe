@@ -47,32 +47,36 @@ bool check_win(){
         Console.WriteLine("You win");
         return true;
         }
+    if (bl != "1" && bm != "2" && br != "3" && ml != "4" && mm != "5" && mr != "6" && tl != "7" && tm != "8" && tr != "9"){
+        Console.WriteLine("Draw");
+        return true;
+    }
     return false;
 }
 
 
-for (int i = 0; i < 9; i++){
+while(true){
     Console.WriteLine("player 1 O's chose a tile");
     string choice = Console.ReadLine();
-    if (choice == "1"){
+     if (choice == "1" && bl == "1"){
         bl = "O";
     }
-    if (choice == "2"){
+    if (choice == "2" && bm == "2"){
         bm = "O";
     }
-    if (choice == "3"){
+    if (choice == "3" && br == "3"){
         br = "O";
-    }if (choice == "4"){
+    }if (choice == "4" && ml == "4"){
         ml = "O";
-    }if (choice == "5"){
+    }if (choice == "5" && mm == "5"){
         mm = "O";
-    }if (choice == "6"){
+    }if (choice == "6" && mr == "6"){
         mr = "O";
-    }if (choice == "7"){
+    }if (choice == "7" && tl == "7"){
         tl = "O";
-    }if (choice == "8"){
+    }if (choice == "8" && tm == "8"){
         tm = "O";
-    }if (choice == "9"){
+    }if (choice == "9" && tr == "9"){
         tr = "O";
     }
     if (choice == "n"){
@@ -85,29 +89,30 @@ for (int i = 0; i < 9; i++){
     Console.WriteLine(bl +"|"+ bm + "|" + br);
     //check_win();
     if (check_win() == true){
+        Console.WriteLine("congrats player 1 O's");
         break;
     }
     Console.WriteLine("player 2 X's chose a tile");
     choice = Console.ReadLine();
-    if (choice == "1"){
+    if (choice == "1" && bl == "1"){
         bl = "X";
     }
-    if (choice == "2"){
+    if (choice == "2" && bm == "2"){
         bm = "X";
     }
-    if (choice == "3"){
+    if (choice == "3" && br == "3"){
         br = "X";
-    }if (choice == "4"){
+    }if (choice == "4" && ml == "4"){
         ml = "X";
-    }if (choice == "5"){
+    }if (choice == "5" && mm == "5"){
         mm = "X";
-    }if (choice == "6"){
+    }if (choice == "6" && mr == "6"){
         mr = "X";
-    }if (choice == "7"){
+    }if (choice == "7" && tl == "7"){
         tl = "X";
-    }if (choice == "8"){
+    }if (choice == "8" && tm == "8"){
         tm = "X";
-    }if (choice == "9"){
+    }if (choice == "9" && tr == "9"){
         tr = "X";
     }
     if (choice == "n"){
@@ -120,6 +125,8 @@ for (int i = 0; i < 9; i++){
     Console.WriteLine(bl +"|"+ bm + "|" + br);
     //check_win();
     if (check_win() == true){
+        Console.WriteLine("congrats player 2 X's");
         break;
     }
+
 }
